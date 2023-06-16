@@ -17,16 +17,29 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <div class="clo-12">
-                    <h1 class="mt-5">Todo List</h1>
+                <div class="clo-12 d-flex">
 
-                    <ul>
-                        <li v-for="(item, i) in treno"> {{ item }} </li>
+                    <div class="col-5">
+                        <h1 class="mt-5">Todo List</h1>
 
-                    </ul>
+                        <ul>
+                            <li v-for="(item, i) in todoList"> {{ item }} </li>
+
+                        </ul>
+
+                    </div>
 
 
-                    <button @click="getDati">Mostra lista</button>
+                    <div class="col-5 mt-5">
+                        <input v-model="newTask" type="text" class="form-control " placeholder="Inserice promemoria">
+                        <button @click="addNewTask" class="btn btn-primary">Aggiungi</button>
+                    </div>
+
+
+
+
+
+
                 </div>
             </div>
         </div>
